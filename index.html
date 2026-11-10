@@ -203,6 +203,27 @@ footer dt{color:rgba(255,255,255,.55)}footer dd{color:#fff}
 footer .bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:44px;padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px}
 footer .bottom b{color:#fff;letter-spacing:.08em}
 
+
+.seecmp{font-weight:700;color:var(--purple);text-decoration:none}.seecmp:hover{text-decoration:underline}
+.cmpcard{margin-top:28px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:var(--shadow)}
+.cmphead{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;flex-wrap:wrap;margin-bottom:20px}
+.cmphead h3{font-size:22px;margin:10px 0 4px}.cmphead p{color:var(--muted);font-size:14.5px;max-width:620px}
+.legend{display:flex;gap:16px;font-size:13px;color:var(--muted)}
+.legend i,.ctbl i{font-style:normal;display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;font-size:12px;font-weight:800}
+i.ok{background:#E7F7EE;color:var(--green)} i.na{background:#F3F0F7;color:#B5A9C6}
+.ctbl{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;min-width:560px}
+.ctbl th,.ctbl td{padding:11px 16px;text-align:center;border-bottom:1px solid var(--line)}
+.ctbl th:first-child,.ctbl td:first-child{text-align:left;position:sticky;left:0;background:#fff;z-index:1}
+.ctbl thead th{vertical-align:bottom;padding-top:18px;border-bottom:2px solid var(--line)}
+.ctbl thead b{display:block;font-size:16px}.ctbl thead small{display:block;font-size:12px;color:var(--muted);font-weight:600}
+.ctbl .sel{background:var(--tint)}
+.ctbl thead th.sel{border-radius:14px 14px 0 0;border-bottom-color:var(--purple)}
+.ctbl .pick{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--purple);color:#fff;padding:3px 9px;border-radius:999px;margin-bottom:6px}
+.ctbl tr.grp td{background:var(--bg);font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--deep);padding:9px 16px}
+.ctbl tr.grp td.sel{background:#EEE2FF}
+.ctbl tbody tr:not(.grp):hover td{background:#FCFAFE}.ctbl tbody tr:not(.grp):hover td.sel{background:#EFE3FF}
+.ctbl tbody tr:last-child td{border-bottom:0}
+
 /* reveal */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
@@ -221,6 +242,7 @@ footer .bottom b{color:#fff;letter-spacing:.08em}
   footer .cols{grid-template-columns:1fr}
 }
 @media (max-width:640px){
+  .cmpcard{padding:18px}
   section{padding:68px 0}
   .wrap{padding:0 16px}
   .hero{padding:120px 0 64px}
@@ -441,13 +463,7 @@ footer .bottom b{color:#fff;letter-spacing:.08em}
       <div class="bundle sel reveal"><span class="badge">SELECTED FOR APSCO</span><h3>Premium</h3><p>Everything in Essential, plus custom requests, custom SIF, 180° and 360° performance management, perks and mental health. Includes Muqeem and Mudad integration.</p></div>
       <div class="bundle reveal"><h3>Enterprise</h3><p>Everything in Premium, plus Bayzat AI Knowledge Hub, accounting integrations, company surveys and employee engagement.</p></div>
     </div>
-    <details class="compare reveal">
-      <summary>Show the full feature comparison</summary>
-      <div class="tblwrap"><table class="tbl" id="cmp">
-        <thead><tr><th>Category</th><th>Feature</th><th>Essential</th><th class="sel">Premium</th><th>Enterprise</th></tr></thead>
-        <tbody></tbody>
-      </table></div>
-    </details>
+    <p class="center reveal" style="margin-top:22px"><a class="seecmp" href="#bundle-comparison">See the full feature comparison →</a></p>
   </div>
 </section>
 
@@ -462,11 +478,12 @@ footer .bottom b{color:#fff;letter-spacing:.08em}
     <div class="pkgs">
       <div class="pkg reveal">
         <header><small>PACKAGE A</small><h3>Administrative documents</h3><span>Company registration and compliance</span></header>
-        <div class="doc pending"><div class="ico">PDF</div><div class="t"><b>Commercial Registration (CR)</b><span>Company registration</span></div><div class="acts"><span>Coming soon</span></div></div>
-        <div class="doc pending"><div class="ico">PDF</div><div class="t"><b>VAT Certificate</b><span>VAT registration</span></div><div class="acts"><span>Coming soon</span></div></div>
-        <div class="doc pending"><div class="ico">PDF</div><div class="t"><b>Zakat Certificate</b><span>Tax good standing</span></div><div class="acts"><span>Coming soon</span></div></div>
+        <div class="doc"><div class="ico">PDF</div><div class="t"><b>Commercial Registration (CR)</b><span>Unified no. 7031435071 · active</span></div><div class="acts"><a href="bayzat-commercial-registration.pdf" target="_blank" rel="noopener">Open</a><a class="dl" href="bayzat-commercial-registration.pdf" download>Download</a></div></div>
+        <div class="doc"><div class="ico">PDF</div><div class="t"><b>VAT Certificate</b><span>VAT no. 311461224700003</span></div><div class="acts"><a href="bayzat-vat-certificate.pdf" target="_blank" rel="noopener">Open</a><a class="dl" href="bayzat-vat-certificate.pdf" download>Download</a></div></div>
+        <div class="doc"><div class="ico">PDF</div><div class="t"><b>Zakat Certificate</b><span>Issued by ZATCA</span></div><div class="acts"><a href="bayzat-zakat-certificate.pdf" target="_blank" rel="noopener">Open</a><a class="dl" href="bayzat-zakat-certificate.pdf" download>Download</a></div></div>
         <div class="doc pending"><div class="ico">PDF</div><div class="t"><b>GOSI Certificate</b><span>Social insurance compliance</span></div><div class="acts"><span>Coming soon</span></div></div>
-        <div class="doc pending"><div class="ico">PDF</div><div class="t"><b>Saudization Certificate</b><span>Nitaqat compliance</span></div><div class="acts"><span>Coming soon</span></div></div>
+        <div class="doc"><div class="ico">PDF</div><div class="t"><b>Saudization Certificate</b><span>Nitaqat, issued by HRSD</span></div><div class="acts"><a href="bayzat-saudization-certificate.pdf" target="_blank" rel="noopener">Open</a><a class="dl" href="bayzat-saudization-certificate.pdf" download>Download</a></div></div>
+        <div class="doc"><div class="ico">PDF</div><div class="t"><b>National Address</b><span>Address proof, Riyadh</span></div><div class="acts"><a href="bayzat-national-address.pdf" target="_blank" rel="noopener">Open</a><a class="dl" href="bayzat-national-address.pdf" download>Download</a></div></div>
       </div>
       <div class="pkg reveal">
         <header><small>PACKAGE B</small><h3>Technical proposal</h3><span>Platform, delivery and security</span></header>
@@ -479,6 +496,20 @@ footer .bottom b{color:#fff;letter-spacing:.08em}
         <div class="doc"><div class="ico">PDF</div><div class="t"><b>Commercial Proposal</b><span>Premium bundle, pricing for 700, 850 and 1,001 employees, one-time fees and terms</span></div><div class="acts"><a href="bayzat-apsco-commercial-proposal.pdf" target="_blank" rel="noopener">Open</a><a class="dl" href="bayzat-apsco-commercial-proposal.pdf" download>Download</a></div></div>
         <div class="doc" style="background:var(--tint)"><div class="t"><b>Have questions on pricing?</b><span>We'll walk you through every option during the demo.</span></div><div class="acts"><a class="dl js-book" href="#contact">Book a meeting</a></div></div>
       </div>
+    </div>
+    <div class="cmpcard reveal" id="bundle-comparison">
+      <div class="cmphead">
+        <div><span class="eyebrow">Bundle comparison</span><h3>What's included in each bundle</h3>
+        <p>Premium, the bundle selected for APSCO, covers every requirement in your request except the optional Hiring (ATS) module.</p></div>
+        <div class="legend"><span><i class="ok">✓</i> Included</span><span><i class="na">—</i> Not included</span></div>
+      </div>
+      <div class="tblwrap"><table class="ctbl" id="cmpDocs">
+        <thead><tr><th scope="col">Feature</th>
+          <th scope="col"><b>Essential</b><small data-count="2"></small></th>
+          <th scope="col" class="sel"><span class="pick">Selected for APSCO</span><b>Premium</b><small data-count="3"></small></th>
+          <th scope="col"><b>Enterprise</b><small data-count="4"></small></th></tr></thead>
+        <tbody></tbody>
+      </table></div>
     </div>
   </div>
 </section>
@@ -574,6 +605,7 @@ footer .bottom b{color:#fff;letter-spacing:.08em}
 </section>
 </main>
 
+
 <footer>
   <div class="wrap">
     <div class="cols">
@@ -647,9 +679,17 @@ const BOOKING_FALLBACK = "mailto:bibars@bayzat.com?subject=" + encodeURIComponen
     ['Performance', '180° performance', N, Y, Y], ['', '360° performance', N, Y, Y],
     ['Engagement & wellness', 'Announcements', Y, Y, Y], ['', 'News feed', Y, Y, Y], ['', 'Company survey', N, N, Y], ['', 'Engagement', N, N, Y], ['', 'Perks', N, Y, Y], ['', 'Mental health', N, Y, Y],
   ];
-  const tb = document.querySelector('#cmp tbody');
-  const mark = v => v ? '<span class="y" aria-label="Included">✓</span>' : '<span class="no" aria-label="Not included">—</span>';
-  tb.innerHTML = rows.map(r => `<tr><td class="cat">${r[0]}</td><td>${r[1]}</td><td>${mark(r[2])}</td><td class="sel">${mark(r[3])}</td><td>${mark(r[4])}</td></tr>`).join('');
+  const tb = document.querySelector('#cmpDocs tbody');
+  const mark = v => v ? '<i class="ok" aria-label="Included">✓</i>' : '<i class="na" aria-label="Not included">—</i>';
+  let html = '', cat = '';
+  rows.forEach(r => {
+    if (r[0] && r[0] !== cat) { cat = r[0]; html += `<tr class="grp"><td colspan="2">${cat}</td><td class="sel"></td><td></td></tr>`; }
+    html += `<tr><td>${r[1]}</td><td>${mark(r[2])}</td><td class="sel">${mark(r[3])}</td><td>${mark(r[4])}</td></tr>`;
+  });
+  tb.innerHTML = html;
+  document.querySelectorAll('#cmpDocs [data-count]').forEach(el => {
+    const i = +el.dataset.count; el.textContent = rows.filter(r => r[i]).length + ' of ' + rows.length + ' features';
+  });
 
   // reveal on scroll
   const els = document.querySelectorAll('.reveal');
