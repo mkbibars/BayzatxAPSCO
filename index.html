@@ -142,7 +142,7 @@ section{padding:96px 0}
 .pkg{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
 .pkg header{padding:22px 24px;background:linear-gradient(135deg,var(--deep),var(--purple));color:#fff}
 .pkg header small{font-size:11.5px;font-weight:800;letter-spacing:.14em;opacity:.8}
-.pkg header h3{font-size:20px;margin-top:4px}
+.pkg header h3{font-size:20px}
 .pkg header span{font-size:13px;opacity:.85}
 .doc{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line)}
 .doc:last-child{border-bottom:0}
@@ -250,6 +250,11 @@ i.ok{background:#E7F7EE;color:var(--green)} i.na{background:#F3F0F7;color:#B5A9C
 .stat .live{position:absolute;top:16px;right:16px;width:9px;height:9px;border-radius:50%;background:#3DDC84;box-shadow:0 0 0 0 rgba(61,220,132,.6);animation:livepulse 2s ease-out infinite}
 @keyframes livepulse{0%{box-shadow:0 0 0 0 rgba(61,220,132,.55)}70%{box-shadow:0 0 0 9px rgba(61,220,132,0)}100%{box-shadow:0 0 0 0 rgba(61,220,132,0)}}
 @media (prefers-reduced-motion:reduce){.stat .live{animation:none}}
+
+.askB{margin-top:auto;border-top:1px solid var(--line);padding:16px 20px;display:flex;align-items:center;gap:12px;color:var(--purple)}
+.askB .ic{flex:none;width:38px;height:38px;border-radius:10px;background:var(--tint);display:grid;place-items:center}
+.askB p{font-size:13.5px;color:var(--muted);line-height:1.45}.askB p b{display:block;color:var(--ink);font-size:14px}
+.askB a{font-weight:700;color:var(--purple);text-decoration:none;font-size:13.5px}.askB a:hover{text-decoration:underline}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
@@ -479,7 +484,7 @@ i.ok{background:#E7F7EE;color:var(--green)} i.na{background:#F3F0F7;color:#B5A9C
     <div class="center reveal">
       <span class="eyebrow">Recommended bundle</span>
       <h2 class="title">Premium covers your full scope</h2>
-      <p class="lead">Pricing for 700, 850 and 1,001 employees is in the price proposals (Package C).</p>
+      <p class="lead">Pricing for 700, 850 and 1,001 employees is in the price proposals, under Proposal documentation.</p>
     </div>
     <div class="bundles">
       <div class="bundle reveal"><h3>Essential</h3><p>Core HR, employee self-service, payroll, time off, attendance and employee management.</p></div>
@@ -516,7 +521,7 @@ i.ok{background:#E7F7EE;color:var(--green)} i.na{background:#F3F0F7;color:#B5A9C
     </div>
     <div class="pkgs">
       <div class="pkg reveal">
-        <header><small>PACKAGE A</small><h3>Administrative documents</h3><span>Company registration and compliance</span></header>
+        <header><h3>Administrative documents</h3><span>Company registration and compliance</span></header>
         <div class="doc"><div class="ico">PDF</div><div class="t"><b>Commercial Registration (CR)</b></div><div class="acts"><a href="bayzat-commercial-registration.pdf" target="_blank" rel="noopener">Open</a><a class="dl" href="bayzat-commercial-registration.pdf" download>Download</a></div></div>
         <div class="doc"><div class="ico">PDF</div><div class="t"><b>VAT Certificate</b></div><div class="acts"><a href="bayzat-vat-certificate.pdf" target="_blank" rel="noopener">Open</a><a class="dl" href="bayzat-vat-certificate.pdf" download>Download</a></div></div>
         <div class="doc"><div class="ico">PDF</div><div class="t"><b>Zakat Certificate</b></div><div class="acts"><a href="bayzat-zakat-certificate.pdf" target="_blank" rel="noopener">Open</a><a class="dl" href="bayzat-zakat-certificate.pdf" download>Download</a></div></div>
@@ -524,7 +529,7 @@ i.ok{background:#E7F7EE;color:var(--green)} i.na{background:#F3F0F7;color:#B5A9C
         <div class="doc"><div class="ico">PDF</div><div class="t"><b>National Address</b></div><div class="acts"><a href="bayzat-national-address.pdf" target="_blank" rel="noopener">Open</a><a class="dl" href="bayzat-national-address.pdf" download>Download</a></div></div>
       </div>
       <div class="pkg reveal">
-        <header><small>PACKAGE B</small><h3>Technical proposal</h3><span>Platform, delivery and security</span></header>
+        <header><h3>Technical proposal</h3><span>Platform, delivery and security</span></header>
         <div class="doc"><div class="ico">PDF</div><div class="t"><b>Bayzat Overview 2026 (English)</b></div><div class="acts"><a href="bayzat-overview-2026-en.pdf" target="_blank" rel="noopener">Open</a><a class="dl" href="bayzat-overview-2026-en.pdf" download>Download</a></div></div>
         <div class="doc"><div class="ico">PDF</div><div class="t"><b>Bayzat Overview 2026 (Arabic)</b></div><div class="acts"><a href="bayzat-overview-2026-ar.pdf" target="_blank" rel="noopener">Open</a><a class="dl" href="bayzat-overview-2026-ar.pdf" download>Download</a></div></div>
         <div class="doc"><div class="ico">PDF</div><div class="t"><b>Technical Proposal</b></div><div class="acts"><a href="bayzat-apsco-technical-proposal.pdf" target="_blank" rel="noopener">Open</a><a class="dl" href="bayzat-apsco-technical-proposal.pdf" download>Download</a></div></div>
@@ -532,11 +537,11 @@ i.ok{background:#E7F7EE;color:var(--green)} i.na{background:#F3F0F7;color:#B5A9C
         <div class="doc"><div class="ico">PDF</div><div class="t"><b>Implementation &amp; Support Plan</b></div><div class="acts"><a href="bayzat-implementation-and-support-plan.pdf" target="_blank" rel="noopener">Open</a><a class="dl" href="bayzat-implementation-and-support-plan.pdf" download>Download</a></div></div>
       </div>
       <div class="pkg reveal">
-        <header><small>PACKAGE C</small><h3>Commercial proposal</h3><span>Bundle, pricing and terms</span></header>
+        <header><h3>Commercial proposal</h3><span>Bundle, pricing and terms</span></header>
         <div class="doc"><div class="ico">PDF</div><div class="t"><b>Price Proposal – 700 employees</b><span>1-year and 3-year offers</span></div><div class="acts"><a href="bayzat-apsco-pricing-700-employees.pdf" target="_blank" rel="noopener">Open</a><a class="dl" href="bayzat-apsco-pricing-700-employees.pdf" download>Download</a></div></div>
         <div class="doc"><div class="ico">PDF</div><div class="t"><b>Price Proposal – 850 employees</b><span>1-year and 3-year offers</span></div><div class="acts"><a href="bayzat-apsco-pricing-850-employees.pdf" target="_blank" rel="noopener">Open</a><a class="dl" href="bayzat-apsco-pricing-850-employees.pdf" download>Download</a></div></div>
         <div class="doc"><div class="ico">PDF</div><div class="t"><b>Price Proposal – 1,001 employees</b><span>1-year and 3-year offers</span></div><div class="acts"><a href="bayzat-apsco-pricing-1001-employees.pdf" target="_blank" rel="noopener">Open</a><a class="dl" href="bayzat-apsco-pricing-1001-employees.pdf" download>Download</a></div></div>
-        <div class="doc" style="background:var(--tint)"><div class="t"><b>Have questions on pricing?</b></div><div class="acts"><a class="dl js-book" href="#contact">Book a meeting</a></div></div>
+        <div class="askB"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><p><b>Questions on pricing?</b>We'll walk you through every option in a live demo.<br><a class="js-book" href="#contact">Book a meeting →</a></p></div>
       </div>
     </div>
   </div>
