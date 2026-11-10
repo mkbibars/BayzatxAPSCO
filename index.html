@@ -235,7 +235,7 @@ i.ok{background:#E7F7EE;color:var(--green)} i.na{background:#F3F0F7;color:#B5A9C
 
 .toc{max-width:600px;margin-top:6px}
 .toc-h{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:6px}
-.toc ol{list-style:none;display:grid;grid-template-columns:1fr 1fr;column-gap:32px;border-top:1px solid rgba(255,255,255,.14)}
+.toc ol{list-style:none;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(5,auto);grid-auto-flow:column;column-gap:32px;border-top:1px solid rgba(255,255,255,.14)}
 .toc li{border-bottom:1px solid rgba(255,255,255,.14)}
 .toc a{display:flex;align-items:center;gap:12px;padding:9px 2px;text-decoration:none;color:rgba(255,255,255,.88);font-size:14px;font-weight:600}
 .toc .no{font-size:11.5px;font-weight:700;color:#C9A8FF;font-variant-numeric:tabular-nums;width:18px}
@@ -244,7 +244,12 @@ i.ok{background:#E7F7EE;color:var(--green)} i.na{background:#F3F0F7;color:#B5A9C
 .toc a:hover,.toc a:focus-visible{color:#fff;outline:none}
 .toc a:hover .ar,.toc a:focus-visible .ar{opacity:1;transform:none}
 .toc a:focus-visible .lb{text-decoration:underline}
-@media (max-width:640px){.toc ol{grid-template-columns:1fr}}
+@media (max-width:640px){.toc ol{grid-template-columns:1fr;grid-template-rows:none;grid-auto-flow:row}}
+
+.stat{position:relative}
+.stat .live{position:absolute;top:16px;right:16px;width:9px;height:9px;border-radius:50%;background:#3DDC84;box-shadow:0 0 0 0 rgba(61,220,132,.6);animation:livepulse 2s ease-out infinite}
+@keyframes livepulse{0%{box-shadow:0 0 0 0 rgba(61,220,132,.55)}70%{box-shadow:0 0 0 9px rgba(61,220,132,0)}100%{box-shadow:0 0 0 0 rgba(61,220,132,0)}}
+@media (prefers-reduced-motion:reduce){.stat .live{animation:none}}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
@@ -291,7 +296,7 @@ i.ok{background:#E7F7EE;color:var(--green)} i.na{background:#F3F0F7;color:#B5A9C
       <a href="#requirements">Requirements</a>
       <a href="#platform">Platform</a>
       <a href="#documents">Documents</a>
-      <a href="#roadmap">Roadmap</a>
+      <a href="#implementation">Implementation</a>
       <a href="#security">Security</a>
     </nav>
     <a class="btn btn-primary btn-sm js-book" href="#contact">Book a demo</a>
@@ -314,15 +319,15 @@ i.ok{background:#E7F7EE;color:var(--green)} i.na{background:#F3F0F7;color:#B5A9C
           <a class="btn btn-primary" href="#documents">View proposal documents</a>
           <a class="btn btn-ghost js-book" href="#contact">Book an online meeting</a>
         </div>
-        <nav class="toc" aria-label="Contents"><p class="toc-h">Contents</p><ol><li><a href="#partnership"><span class="no">01</span><span class="lb">Overview</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#requirements"><span class="no">02</span><span class="lb">APSCO Requirements</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#platform"><span class="no">03</span><span class="lb">Platform tour</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#integrations"><span class="no">04</span><span class="lb">Government integrations</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#bundle"><span class="no">05</span><span class="lb">Bundles</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#documents"><span class="no">06</span><span class="lb">Proposal documents</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#roadmap"><span class="no">07</span><span class="lb">Implementation roadmap</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#security"><span class="no">08</span><span class="lb">Hosting &amp; security</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#support"><span class="no">09</span><span class="lb">Support</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#contact"><span class="no">10</span><span class="lb">Book a demo</span><span class="ar" aria-hidden="true">→</span></a></li></ol></nav>
+        <nav class="toc" aria-label="Contents"><p class="toc-h">Contents</p><ol><li><a href="#partnership"><span class="no">01</span><span class="lb">Overview</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#requirements"><span class="no">02</span><span class="lb">APSCO Requirements</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#platform"><span class="no">03</span><span class="lb">Platform tour</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#integrations"><span class="no">04</span><span class="lb">Government integrations</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#bundle"><span class="no">05</span><span class="lb">Bundles</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#documents"><span class="no">06</span><span class="lb">Proposal documents</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#implementation"><span class="no">07</span><span class="lb">Implementation process</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#security"><span class="no">08</span><span class="lb">Hosting &amp; security</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#support"><span class="no">09</span><span class="lb">Support</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#contact"><span class="no">10</span><span class="lb">Book a demo</span><span class="ar" aria-hidden="true">→</span></a></li></ol></nav>
       </div>
       <div class="shot"><img src="app.webp" alt="Bayzat on web and mobile" width="1135" height="693"></div>
     </div>
     <div class="stats">
-      <div class="stat"><b>4,000+</b><span>companies on Bayzat</span></div>
-      <div class="stat"><b>ISO 27001:2022</b><span>certified, verified by AssuranceLab</span></div>
-      <div class="stat"><b>SOC 2 Type II</b><span>independently audited</span></div>
-      <div class="stat"><b>Google Cloud</b><span>hosted in Dammam, KSA</span></div>
+      <div class="stat"><i class="live" aria-hidden="true"></i><b>4,000+</b><span>companies on Bayzat</span></div>
+      <div class="stat"><i class="live" aria-hidden="true"></i><b>ISO 27001:2022</b><span>certified, verified by AssuranceLab</span></div>
+      <div class="stat"><i class="live" aria-hidden="true"></i><b>SOC 2 Type II</b><span>independently audited</span></div>
+      <div class="stat"><i class="live" aria-hidden="true"></i><b>Google Cloud</b><span>hosted in Dammam, KSA</span></div>
     </div>
   </div>
 </section>
@@ -537,11 +542,11 @@ i.ok{background:#E7F7EE;color:var(--green)} i.na{background:#F3F0F7;color:#B5A9C
   </div>
 </section>
 
-<!-- ROADMAP -->
-<section id="roadmap">
+<!-- IMPLEMENTATION -->
+<section id="implementation">
   <div class="wrap">
     <div class="center reveal">
-      <span class="eyebrow">Implementation roadmap</span>
+      <span class="eyebrow">Implementation process</span>
       <h2 class="title">From signing to full adoption</h2>
       <p class="lead">Two stages, each with a named owner at Bayzat. Data migration, configuration and training are covered by the one-time implementation fee.</p>
     </div>
