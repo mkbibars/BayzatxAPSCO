@@ -224,6 +224,14 @@ i.ok{background:#E7F7EE;color:var(--green)} i.na{background:#F3F0F7;color:#B5A9C
 .ctbl tbody tr:not(.grp):hover td{background:#FCFAFE}.ctbl tbody tr:not(.grp):hover td.sel{background:#EFE3FF}
 .ctbl tbody tr:last-child td{border-bottom:0}
 
+.cmpdrop{margin-top:26px}
+.cmpdrop>summary{list-style:none;cursor:pointer;display:flex;justify-content:center;align-items:center;gap:10px;font-weight:700;color:var(--purple);padding:12px 18px;border-radius:999px;background:#fff;border:1.5px solid var(--purple);width:max-content;margin:0 auto}
+.cmpdrop>summary::-webkit-details-marker{display:none}
+.cmpdrop>summary:after{content:"";width:9px;height:9px;border-right:2.5px solid currentColor;border-bottom:2.5px solid currentColor;transform:rotate(45deg) translateY(-3px);transition:transform .2s}
+.cmpdrop[open]>summary:after{transform:rotate(-135deg) translateY(-2px)}
+.cmpdrop>summary:hover,.cmpdrop>summary:focus-visible{background:var(--tint);outline:none}
+.cmpdrop[open] .cmpcard{animation:fade .3s ease}
+
 /* reveal */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
@@ -463,7 +471,23 @@ i.ok{background:#E7F7EE;color:var(--green)} i.na{background:#F3F0F7;color:#B5A9C
       <div class="bundle sel reveal"><span class="badge">RECOMMENDED FOR APSCO</span><h3>Premium</h3><p>Everything in Essential, plus custom requests, custom SIF, 180° and 360° performance management, perks and mental health. Includes Muqeem and Mudad integration.</p></div>
       <div class="bundle reveal"><h3>Enterprise</h3><p>Everything in Premium, plus Bayzat AI Knowledge Hub, accounting integrations, company surveys and employee engagement.</p></div>
     </div>
-    <p class="center reveal" style="margin-top:22px"><a class="seecmp" href="#bundle-comparison">See the full feature comparison →</a></p>
+    <details class="cmpdrop reveal" id="bundle-comparison">
+      <summary>See the full feature comparison</summary>
+      <div class="cmpcard">
+        <div class="cmphead">
+          <div><span class="eyebrow">Bundle comparison</span><h3>What's included in each bundle</h3>
+          <p>Premium, the bundle recommended for APSCO, covers every requirement in your request except the optional Hiring (ATS) module.</p></div>
+          <div class="legend"><span><i class="ok">✓</i> Included</span><span><i class="na">—</i> Not included</span></div>
+        </div>
+        <div class="tblwrap"><table class="ctbl" id="cmpDocs">
+          <thead><tr><th scope="col">Feature</th>
+            <th scope="col"><b>Essential</b><small data-count="2"></small></th>
+            <th scope="col" class="sel"><span class="pick">Recommended for APSCO</span><b>Premium</b><small data-count="3"></small></th>
+            <th scope="col"><b>Enterprise</b><small data-count="4"></small></th></tr></thead>
+          <tbody></tbody>
+        </table></div>
+      </div>
+    </details>
   </div>
 </section>
 
@@ -499,20 +523,6 @@ i.ok{background:#E7F7EE;color:var(--green)} i.na{background:#F3F0F7;color:#B5A9C
         <div class="doc"><div class="ico">PDF</div><div class="t"><b>Price Proposal – 1,001 employees</b><span>1-year and 3-year offers, inclusions and terms</span></div><div class="acts"><a href="bayzat-apsco-pricing-1001-employees.pdf" target="_blank" rel="noopener">Open</a><a class="dl" href="bayzat-apsco-pricing-1001-employees.pdf" download>Download</a></div></div>
         <div class="doc" style="background:var(--tint)"><div class="t"><b>Have questions on pricing?</b><span>We'll walk you through every option during the demo.</span></div><div class="acts"><a class="dl js-book" href="#contact">Book a meeting</a></div></div>
       </div>
-    </div>
-    <div class="cmpcard reveal" id="bundle-comparison">
-      <div class="cmphead">
-        <div><span class="eyebrow">Bundle comparison</span><h3>What's included in each bundle</h3>
-        <p>Premium, the bundle recommended for APSCO, covers every requirement in your request except the optional Hiring (ATS) module.</p></div>
-        <div class="legend"><span><i class="ok">✓</i> Included</span><span><i class="na">—</i> Not included</span></div>
-      </div>
-      <div class="tblwrap"><table class="ctbl" id="cmpDocs">
-        <thead><tr><th scope="col">Feature</th>
-          <th scope="col"><b>Essential</b><small data-count="2"></small></th>
-          <th scope="col" class="sel"><span class="pick">Recommended for APSCO</span><b>Premium</b><small data-count="3"></small></th>
-          <th scope="col"><b>Enterprise</b><small data-count="4"></small></th></tr></thead>
-        <tbody></tbody>
-      </table></div>
     </div>
   </div>
 </section>
