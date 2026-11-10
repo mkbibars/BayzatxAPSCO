@@ -232,6 +232,11 @@ i.ok{background:#E7F7EE;color:var(--green)} i.na{background:#F3F0F7;color:#B5A9C
 .cmpdrop>summary:hover,.cmpdrop>summary:focus-visible{background:var(--tint);outline:none}
 .cmpdrop[open] .cmpcard{animation:fade .3s ease}
 
+.jump{display:flex;flex-wrap:wrap;gap:8px;align-items:center;max-width:620px}
+.jump .jl{font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-right:4px}
+.jump a{font-size:13px;font-weight:600;color:#fff;text-decoration:none;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);transition:background .15s,border-color .15s}
+.jump a:hover,.jump a:focus-visible{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.5);outline:none}
+
 /* reveal */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
@@ -300,11 +305,7 @@ i.ok{background:#E7F7EE;color:var(--green)} i.na{background:#F3F0F7;color:#B5A9C
           <a class="btn btn-primary" href="#documents">View proposal documents</a>
           <a class="btn btn-ghost js-book" href="#contact">Book an online meeting</a>
         </div>
-        <div class="meta">
-          <span class="chip"><i></i>ISO 27001 &amp; SOC 2 Type II</span>
-          <span class="chip"><i></i>Hosted in Dammam, KSA</span>
-          <span class="chip"><i></i>GOSI · Mudad · Muqeem live</span>
-        </div>
+        <nav class="jump" aria-label="Jump to section"><span class="jl">Jump to</span><a href="#partnership">Overview</a><a href="#requirements">APSCO Requirements</a><a href="#platform">Platform tour</a><a href="#integrations">Integrations</a><a href="#bundle">Bundles</a><a href="#documents">Documents</a><a href="#roadmap">Roadmap</a><a href="#security">Security</a><a href="#support">Support</a><a href="#contact">Contact</a></nav>
       </div>
       <div class="shot"><img src="app.webp" alt="Bayzat on web and mobile" width="1135" height="693"></div>
     </div>
@@ -356,7 +357,7 @@ i.ok{background:#E7F7EE;color:var(--green)} i.na{background:#F3F0F7;color:#B5A9C
 <section id="requirements" style="background:#fff">
   <div class="wrap">
     <div class="center reveal">
-      <span class="eyebrow">Your requirements</span>
+      <span class="eyebrow">APSCO Requirements</span>
       <h2 class="title">All eight scope areas, covered</h2>
       <p class="lead">Every requirement in APSCO's request, and how Bayzat meets it. "Included" means part of the Premium bundle.</p>
     </div>
