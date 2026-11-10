@@ -232,10 +232,19 @@ i.ok{background:#E7F7EE;color:var(--green)} i.na{background:#F3F0F7;color:#B5A9C
 .cmpdrop>summary:hover,.cmpdrop>summary:focus-visible{background:var(--tint);outline:none}
 .cmpdrop[open] .cmpcard{animation:fade .3s ease}
 
-.jump{display:flex;flex-wrap:wrap;gap:8px;align-items:center;max-width:620px}
-.jump .jl{font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-right:4px}
-.jump a{font-size:13px;font-weight:600;color:#fff;text-decoration:none;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);transition:background .15s,border-color .15s}
-.jump a:hover,.jump a:focus-visible{background:rgba(255,255,255,.22);border-color:rgba(255,255,255,.5);outline:none}
+
+.toc{max-width:600px;margin-top:6px}
+.toc-h{font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:6px}
+.toc ol{list-style:none;display:grid;grid-template-columns:1fr 1fr;column-gap:32px;border-top:1px solid rgba(255,255,255,.14)}
+.toc li{border-bottom:1px solid rgba(255,255,255,.14)}
+.toc a{display:flex;align-items:center;gap:12px;padding:9px 2px;text-decoration:none;color:rgba(255,255,255,.88);font-size:14px;font-weight:600}
+.toc .no{font-size:11.5px;font-weight:700;color:#C9A8FF;font-variant-numeric:tabular-nums;width:18px}
+.toc .lb{flex:1}
+.toc .ar{opacity:0;transform:translateX(-6px);transition:opacity .15s,transform .15s;color:#fff}
+.toc a:hover,.toc a:focus-visible{color:#fff;outline:none}
+.toc a:hover .ar,.toc a:focus-visible .ar{opacity:1;transform:none}
+.toc a:focus-visible .lb{text-decoration:underline}
+@media (max-width:640px){.toc ol{grid-template-columns:1fr}}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
@@ -305,7 +314,7 @@ i.ok{background:#E7F7EE;color:var(--green)} i.na{background:#F3F0F7;color:#B5A9C
           <a class="btn btn-primary" href="#documents">View proposal documents</a>
           <a class="btn btn-ghost js-book" href="#contact">Book an online meeting</a>
         </div>
-        <nav class="jump" aria-label="Jump to section"><span class="jl">Jump to</span><a href="#partnership">Overview</a><a href="#requirements">APSCO Requirements</a><a href="#platform">Platform tour</a><a href="#integrations">Integrations</a><a href="#bundle">Bundles</a><a href="#documents">Documents</a><a href="#roadmap">Roadmap</a><a href="#security">Security</a><a href="#support">Support</a><a href="#contact">Contact</a></nav>
+        <nav class="toc" aria-label="Contents"><p class="toc-h">Contents</p><ol><li><a href="#partnership"><span class="no">01</span><span class="lb">Overview</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#requirements"><span class="no">02</span><span class="lb">APSCO Requirements</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#platform"><span class="no">03</span><span class="lb">Platform tour</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#integrations"><span class="no">04</span><span class="lb">Government integrations</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#bundle"><span class="no">05</span><span class="lb">Bundles</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#documents"><span class="no">06</span><span class="lb">Proposal documents</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#roadmap"><span class="no">07</span><span class="lb">Implementation roadmap</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#security"><span class="no">08</span><span class="lb">Hosting &amp; security</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#support"><span class="no">09</span><span class="lb">Support</span><span class="ar" aria-hidden="true">→</span></a></li><li><a href="#contact"><span class="no">10</span><span class="lb">Book a demo</span><span class="ar" aria-hidden="true">→</span></a></li></ol></nav>
       </div>
       <div class="shot"><img src="app.webp" alt="Bayzat on web and mobile" width="1135" height="693"></div>
     </div>
